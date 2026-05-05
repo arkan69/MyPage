@@ -1,0 +1,91 @@
+---
+const projects = [
+  {
+    label: 'Financial System',
+    title: 'Digital Loan Backend Flow',
+    description:
+      'Worked on backend services for loan processing flows, API integration, and database logic for financial application systems.',
+    type: 'Backend Workflow',
+    role: 'Backend Developer',
+    stack: '.NET, SQL Server, REST API',
+    size: 'lg:col-span-7',
+  },
+  {
+    label: 'Modernization',
+    title: 'Legacy .NET Migration',
+    description:
+      'Rewriting legacy .NET Framework modules into cleaner, modern .NET architecture with service and repository separation.',
+    type: 'Migration',
+    role: 'Backend Refactor',
+    stack: '.NET, C#, Repository Pattern',
+    size: 'lg:col-span-5',
+  },
+  {
+    label: 'Message Processing',
+    title: 'RabbitMQ Loan Processing System',
+    description:
+      'Built a message-based loan processing mini-system using RabbitMQ, retry flow, worker service, and SQL Server.',
+    type: 'Async Processing',
+    role: 'System Design & Build',
+    stack: 'RabbitMQ, Worker Service, SQL Server',
+    size: 'lg:col-span-5',
+  },
+  {
+    label: 'API Rewrite',
+    title: 'CMS / Content API Modernization',
+    description:
+      'Rebuilt CMS-style content endpoints using modern .NET patterns, file handling, and database-driven content retrieval.',
+    type: 'API Modernization',
+    role: 'Backend Developer',
+    stack: 'ASP.NET Core, File Handling, SQL Server',
+    size: 'lg:col-span-7',
+  },
+];
+---
+
+<section id="projects" class="border-b border-zinc-800 px-6 py-24">
+  <div class="mx-auto max-w-6xl">
+    <div class="max-w-2xl">
+      <p class="text-sm font-semibold uppercase tracking-[0.24em] text-blue-400">
+        Projects
+      </p>
+      <h2 class="mt-4 text-3xl font-semibold tracking-tight text-zinc-100 md:text-4xl">
+        Selected work and backend case studies.
+      </h2>
+      <p class="mt-4 text-lg leading-8 text-zinc-400">
+        Real backend experience translated into business solutions.
+      </p>
+    </div>
+
+    <div class="mt-12 grid gap-6 lg:grid-cols-12">
+      {projects.map((project) => (
+        <article class:list={[project.size, 'rounded-3xl border border-zinc-800 bg-zinc-900/60 p-6 md:p-8']}>
+          <p class="text-xs font-medium uppercase tracking-[0.2em] text-blue-400">
+            {project.label}
+          </p>
+          <h3 class="mt-4 text-2xl font-semibold tracking-tight text-zinc-100">
+            {project.title}
+          </h3>
+          <p class="mt-4 max-w-2xl leading-7 text-zinc-400">
+            {project.description}
+          </p>
+
+          <div class="mt-8 grid gap-4 border-t border-zinc-800 pt-5 text-sm sm:grid-cols-3">
+            <div>
+              <p class="text-xs uppercase tracking-[0.18em] text-zinc-500">Type</p>
+              <p class="mt-2 text-zinc-300">{project.type}</p>
+            </div>
+            <div>
+              <p class="text-xs uppercase tracking-[0.18em] text-zinc-500">Role</p>
+              <p class="mt-2 text-zinc-300">{project.role}</p>
+            </div>
+            <div>
+              <p class="text-xs uppercase tracking-[0.18em] text-zinc-500">Stack</p>
+              <p class="mt-2 text-zinc-300">{project.stack}</p>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

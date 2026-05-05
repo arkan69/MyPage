@@ -1,0 +1,82 @@
+---
+const services = [
+  {
+    label: 'Modernization',
+    title: '.NET Modernization',
+    description:
+      'Upgrade legacy .NET Framework systems into modern, maintainable .NET applications.',
+    featured: true,
+  },
+  {
+    label: 'API',
+    title: 'API Development',
+    description:
+      'Build secure, scalable REST APIs for web, mobile, and enterprise systems.',
+  },
+  {
+    label: 'Database',
+    title: 'SQL Server Optimization',
+    description:
+      'Improve query performance, stored procedures, and database efficiency.',
+  },
+  {
+    label: 'Integration',
+    title: 'System Integration',
+    description:
+      'Connect systems using REST, SOAP, and message-based architecture.',
+  },
+  {
+    label: 'Automation',
+    title: 'Background Services',
+    description:
+      'Build reliable workers and scheduled processes for automation.',
+  },
+  {
+    label: 'Internal Tools',
+    title: 'Internal Tools',
+    description:
+      'Develop admin dashboards and internal systems to improve workflows.',
+  },
+];
+---
+
+<section id="services" class="border-b border-zinc-800 px-6 py-24">
+  <div class="mx-auto max-w-6xl ">
+    <div class="max-w-2xl ">
+      <p class="text-sm font-semibold uppercase tracking-[0.24em] text-blue-400">
+        Services
+      </p>
+
+      <h2 class="mt-4 text-3xl font-semibold tracking-tight text-zinc-100 md:text-4xl">
+        What I can help you build, improve, and modernize.
+      </h2>
+
+      <p class="mt-4 text-lg leading-8 text-zinc-400">
+        Focused backend solutions for real business needs.
+      </p>
+    </div>
+
+    <div class="mt-12 grid gap-6 lg:grid-cols-12">
+      {services.map((service) => (
+        <article
+          class:list={[
+            'rounded-3xl border border-zinc-800 bg-zinc-900/60 p-6 transition hover:border-blue-500/40 hover:-translate-y-1 hover:scale-[1.01]',
+            service.featured
+            ? 'lg:col-span-7 lg:p-8 border-blue-500/30 bg-blue-500/5'
+            : 'lg:col-span-5',
+          ]}
+        >
+          <p class="text-xs font-medium uppercase tracking-[0.2em] text-blue-400">
+            {service.label}
+          </p>
+          <h3 class="mt-4 text-xl font-semibold text-zinc-100 md:text-2xl">
+            {service.title}
+          </h3>
+          <p class="mt-4 max-w-xl leading-7 text-zinc-400">
+            {service.description}
+          </p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

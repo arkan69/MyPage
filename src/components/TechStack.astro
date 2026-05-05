@@ -1,0 +1,40 @@
+---
+const technologies = [
+  '.NET',
+  'ASP.NET Core',
+  'C#',
+  'SQL Server',
+  'Dapper',
+  'EF Core',
+  'REST API',
+  'SOAP',
+  'RabbitMQ',
+  'Docker',
+  'Git',
+];
+---
+
+<section id="tech-stack" class="border-b border-zinc-800 px-6 py-24">
+  <div class="mx-auto max-w-6xl">
+    <div class="max-w-2xl">
+      <p class="text-sm font-semibold uppercase tracking-[0.24em] text-blue-400">
+        Tech Stack
+      </p>
+      <h2 class="mt-4 text-3xl font-semibold tracking-tight text-zinc-100 md:text-4xl">
+        Technologies I use to build reliable backend systems.
+      </h2>
+      <p class="mt-5 text-base leading-8 text-zinc-400 md:text-lg">
+        A practical backend stack for APIs, integrations, data access, and
+        maintainable service architecture.
+      </p>
+    </div>
+
+    <div class="mt-10 flex flex-wrap gap-3">
+      {technologies.map((technology) => (
+        <div class="rounded-full border border-zinc-800 bg-zinc-900/70 px-4 py-2 text-sm font-medium text-zinc-300 transition hover:border-blue-500/40 hover:text-zinc-100">
+          {technology}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
